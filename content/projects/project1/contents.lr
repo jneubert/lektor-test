@@ -1,0 +1,7 @@
+_model: page
+---
+_template: projects.html
+---
+title: Project 1
+---
+body: That's the project info

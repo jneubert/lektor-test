@@ -1,0 +1,619 @@
+_model: spec
+---
+title: Dublin Core Metadata Element Set
+---
+version: 1.1
+---
+body:
+
+<table cellspacing="0" class="docinfo">
+<tr>
+<th>Identifier:</th>
+<td><a href="/documents/2012/06/14/dces/">http://dublincore.org/documents/2012/06/14/dces/</a></td></tr>
+<tr>
+<th>Replaces:</th>
+<td><a href="/documents/2010/10/11/dces/">http://dublincore.org/documents/2010/10/11/dces/</a></td></tr>
+<tr>
+<th>Latest version:</th>
+<td><a href="/documents/dces/">http://dublincore.org/documents/dces/</a></td></tr>
+<tr>
+<th>Date Issued:</th>
+<td>2012-06-14</td></tr>
+<tr>
+<th>Status of document:</th>
+<td>This is a DCMI <a href="/documents/#recommendations">Recommendation</a>.</td></tr>
+<tr>
+<th>Description of document:</th>
+<td>This document provides ready reference for the Dublin Core Metadata Element Set, Version 1.1.  For 
+more detailed documentation and links to historical versioning information, see the document
+<a href="/documents/dcmi-terms/">"DCMI Metadata Terms"</a>.
+</td></tr>
+</table>
+<a name="introduction" id="introduction"></a> 
+<h2>Introduction</h2>
+
+<p>The Dublin Core Metadata Element Set is a vocabulary of fifteen
+properties for use in resource description.  The name "Dublin"
+is due to its origin at a 1995 invitational workshop in Dublin,
+Ohio; "core" because its elements are broad and generic,
+usable for describing a wide range of resources.</p>
+
+<p>The fifteen element "Dublin Core" described in this
+standard is part of a larger set of metadata vocabularies
+and technical specifications maintained by the Dublin Core
+Metadata Initiative (DCMI).  The full set of vocabularies,
+DCMI Metadata Terms [DCMI-TERMS], also includes sets of
+resource classes (including the DCMI Type Vocabulary [DCMI-TYPE]),
+vocabulary encoding schemes, and syntax encoding schemes.
+The terms in DCMI vocabularies are intended to be used in
+combination with terms from other, compatible vocabularies
+in the context of application profiles and on the basis of
+the DCMI Abstract Model [DCAM].</p>
+
+<p>All changes made to terms of the Dublin Core Metadata Element
+Set since 2001 have been reviewed by a DCMI Usage Board in
+the context of a DCMI Namespace Policy [DCMI-NAMESPACE].
+The namespace policy describes how DCMI terms are assigned
+Uniform Resource Identifiers (URIs) and sets limits on the
+range of editorial changes that may allowably be made to
+the labels, definitions, and usage comments associated with
+existing DCMI terms.</p>
+
+<p>This document, an excerpt from the more
+comprehensive document "DCMI Metadata Terms" 
+[<a href="#DCTERMS">DCTERMS</a>]
+provides an abbreviated reference version of the fifteen
+element descriptions that have been formally endorsed in the
+following standards:</p>
+
+
+<ul>
+<li>ISO Standard 15836:2009 of February 2009 [<a href="#ISO15836">ISO15836</a>]</li>
+<li>ANSI/NISO Standard Z39.85-2012 of February 2013 [<a href="#NISOZ3985">NISOZ3985</a>]</li>
+<li>IETF RFC 5013 of August 2007 [<a href="#RFC5013">RFC5013</a>]</li>
+</ul>
+
+<p>Since 1998, when these fifteen elements entered into
+a standardization track, notions of best practice in the
+Semantic Web have evolved to include the assignment of formal
+domains and ranges in addition to definitions in natural language.
+Domains and ranges specify what kind of described resources and
+value resources are associated with a given property.  Domains
+and ranges express the meanings implicit in natural-language
+definitions in an explicit form that is usable for the
+automatic processing of logical inferences.  When a given
+property is encountered, an inferencing application may
+use information about the domains and ranges assigned to
+a property in order to make inferences about the resources
+described thereby.</p>
+
+<p>Since January 2008, therefore, DCMI includes formal domains
+and ranges in the definitions of its properties.  So as not
+to affect the conformance of existing implementations of
+"simple Dublin Core" in RDF, domains and ranges have not been
+specified for the fifteen properties of the dc: namespace
+(http://purl.org/dc/elements/1.1/).  Rather, fifteen new
+properties with "names" identical to those of the Dublin
+Core Metadata Element Set Version 1.1 have been created
+in the dcterms: namespace (http://purl.org/dc/terms/).
+These fifteen new properties have been defined as
+subproperties of the corresponding properties of DCMES
+Version 1.1 and assigned domains and ranges as specified
+in the more comprehensive document "DCMI Metadata Terms"
+[<a href="#DCTERMS">DCTERMS</a>].</p>
+
+<p>Implementers may freely choose to use these fifteen properties
+either in their legacy dc: variant (e.g., http://purl.org/dc/elements/1.1/creator) or
+in the dcterms: variant (e.g., http://purl.org/dc/terms/creator) depending
+on application requirements.  The RDF schemas of
+the DCMI namespaces describe the subproperty relation of
+dcterms:creator to dc:creator for use by Semantic
+Web-aware applications.  Over time, however, implementers are 
+encouraged to use the semantically more precise dcterms: 
+properties, as they more fully follow emerging notions of 
+best practice for machine-processable metadata.</p>
+
+<h4>References</h4>
+<table width="95%" border="0" align="center">
+
+<tr><td width="20%">
+<a name="RFC"></a>[RFC5013]
+</td><td width="80%">
+<a href="http://www.ietf.org/rfc/rfc5013.txt">http://www.ietf.org/rfc/rfc5013.txt</a>
+</td></tr>
+
+<tr><td width="20%">
+<a name="NISOZ3985"></a>[NISOZ3985]
+</td><td width="80%">
+<a href="http://www.niso.org/apps/group_public/download.php/10256/Z39-85-2012_dublin_core.pdf">http://www.niso.org/apps/group_public/download.php/10256/Z39-85-2012_dublin_core.pdf</a>
+</td></tr>
+
+<tr><td width="20%">
+<a name="ISO15836"></a>[ISO15836]
+</td><td width="80%">
+<a href="http://www.iso.org/iso/search.htm?qt=15836&amp;searchSubmit=Search&amp;sort=rel&amp;type=simple&amp;published=on">http://www.iso.org/iso/search.htm?qt=15836&amp;searchSubmit=Search&amp;sort=rel&amp;type=simple&amp;published=on</a>
+</td></tr>
+
+<tr><td width="20%">
+<a name="TRANSLATIONS"></a>[TRANSLATIONS]
+</td><td width="80%">
+<a href="/resources/translations/">http://dublincore.org/resources/translations/</a>
+</td></tr>
+
+<tr><td width="20%">
+<a name="DCTERMS"></a>[DCTERMS]
+</td><td width="80%">
+<a href="/documents/dcmi-terms/">http://dublincore.org/documents/dcmi-terms/</a>
+</td></tr>
+
+</table>
+
+
+<a name="the_elements" id="the_elements"></a> 
+<h2>The Elements</h2>
+<table class="border" cellspacing="0">
+<tr>
+<th colspan="2">
+<a name="contributor" />Term Name: contributor</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/contributor">http://purl.org/dc/elements/1.1/contributor</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Contributor</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>An entity responsible for making
+        contributions to the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Examples of a Contributor include a person,
+        an organization, or a service. Typically, the
+        name of a Contributor should be used to indicate
+        the entity.</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="coverage" />Term Name: coverage</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/coverage">http://purl.org/dc/elements/1.1/coverage</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Coverage</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>The spatial or temporal topic of the resource, the
+        spatial applicability of the resource, or the 
+        jurisdiction under which the resource is relevant.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN].  Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</td>
+</tr>
+<tr>
+<td>References:
+					</td>
+<td>[TGN] http://www.getty.edu/research/tools/vocabulary/tgn/index.html</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="creator" />Term Name: creator</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/creator">http://purl.org/dc/elements/1.1/creator</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Creator</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>An entity primarily responsible for making 
+        the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Examples of a Creator include a person, an
+        organization, or a service. Typically, the name
+        of a Creator should be used to indicate the entity.</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="date" />Term Name: date</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Date</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>A point or period of time associated with an 
+        event in the lifecycle of the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Date may be used to express temporal information
+        at any level of granularity.  Recommended best 
+        practice is to use an encoding scheme, such as 
+        the W3CDTF profile of ISO 8601 [W3CDTF].</td>
+</tr>
+<tr>
+<td>References:
+					</td>
+<td>[W3CDTF] http://www.w3.org/TR/NOTE-datetime</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="description" />Term Name: description</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>An account of the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Description may include but is not limited to:
+        an abstract, a table of contents, a graphical
+        representation, or a free-text account of
+        the resource.</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="format" />Term Name: format</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/format">http://purl.org/dc/elements/1.1/format</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Format</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>The file format, physical medium, or dimensions
+        of the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Examples of dimensions include
+        size and duration. Recommended best practice is
+        to use a controlled vocabulary such as the list
+        of Internet Media Types [MIME].</td>
+</tr>
+<tr>
+<td>References:
+					</td>
+<td>[MIME] http://www.iana.org/assignments/media-types/</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="identifier" />Term Name: identifier</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/identifier">http://purl.org/dc/elements/1.1/identifier</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Identifier</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>An unambiguous reference to the resource within
+        a given context.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Recommended best practice is to identify the
+        resource by means of a string conforming
+        to a formal identification system. </td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="language" />Term Name: language</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/language">http://purl.org/dc/elements/1.1/language</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Language</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>A language of the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Recommended best practice is to use a controlled
+        vocabulary such as RFC 4646 [RFC4646].</td>
+</tr>
+<tr>
+<td>References:
+					</td>
+<td>[RFC4646] http://www.ietf.org/rfc/rfc4646.txt</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="publisher" />Term Name: publisher</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/publisher">http://purl.org/dc/elements/1.1/publisher</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Publisher</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>An entity responsible for making the resource 
+        available.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Examples of a Publisher include a person, an
+        organization, or a service. Typically, the name of
+        a Publisher should be used to indicate the entity.</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="relation" />Term Name: relation</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/relation">http://purl.org/dc/elements/1.1/relation</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Relation</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>A related resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Recommended best practice is to identify the
+        related resource by means of a string conforming
+        to a formal identification system. </td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="rights" />Term Name: rights</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/rights">http://purl.org/dc/elements/1.1/rights</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Rights</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>Information about rights held in and 
+        over the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Typically, rights information includes 
+        a statement about various property rights 
+        associated with the resource, including
+        intellectual property rights.</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="source" />Term Name: source</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/source">http://purl.org/dc/elements/1.1/source</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Source</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>A related resource from which the described resource is derived.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>The described resource may be derived from the
+        related resource in whole or in part. Recommended
+        best practice is to identify the related resource
+        by means of a string conforming to a formal
+        identification system.</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="subject" />Term Name: subject</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/subject">http://purl.org/dc/elements/1.1/subject</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Subject</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>The topic of the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Typically, the subject will be represented using
+        keywords, key phrases, or classification codes.
+        Recommended best practice is to use a controlled
+        vocabulary.</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="title" />Term Name: title</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/title">http://purl.org/dc/elements/1.1/title</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>A name given to the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Typically, a Title will be a name by which 
+        the resource is formally known.</td>
+</tr>
+<tr>
+<th colspan="2">
+<a name="type" />Term Name: type</th>
+</tr>
+<tr>
+<td>URI:
+					</td>
+<td>
+<a href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a>
+</td>
+</tr>
+<tr>
+<td>Label:
+					</td>
+<td>Type</td>
+</tr>
+<tr>
+<td>Definition:
+					</td>
+<td>The nature or genre of the resource.</td>
+</tr>
+<tr>
+<td>Comment:
+					</td>
+<td>Recommended best practice is to use a controlled
+        vocabulary such as the DCMI Type Vocabulary
+        [DCMITYPE]. To describe the file format, physical
+        medium, or dimensions of the resource, use the
+        Format element.</td>
+</tr>
+<tr>
+<td>References:
+					</td>
+<td>[DCMITYPE] http://dublincore.org/documents/dcmi-type-vocabulary/</td>
+</tr>
+</table>
+Errata:
+<ul>
+<li>2013-11-05. Updated reference to ANSI/NISO Standard Z39.85-2012 of February 2013 [<a href="#NISOZ3985">NISOZ3985</a>]</li>
+</ul>

@@ -2,5 +2,5 @@
 name = lektor-test
 [servers.production]
 name = Production
-target = rsync://ite-srv11/var/www/html/tmp/lektor-test
+target = rsync://ite-root@ite-srv11/var/www/html/tmp/lektor-test
 
